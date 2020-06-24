@@ -12,12 +12,12 @@ const tasklistsInsert = async (milestones, milestonesid) => {
         let taskListsId = await handleSelect('dbo.taskLists', milestones.tasklists[index].id, 'taskListsId');
 
         if(taskListsId) {
-            await connection('dbo.milestonesTaskLists')
+            await connection('dbo.milestonesTasklists')
                 .where({
                     milestonesid: milestonesid
                 }).del();
         
-            await connection('dbo.milestonesTaskLists')
+            await connection('dbo.milestonesTasklists')
             .insert({
                 milestonesid: milestonesid
                 ,tasklistsid: taskListsId

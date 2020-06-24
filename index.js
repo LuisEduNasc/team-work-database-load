@@ -68,9 +68,9 @@ const callFuncs = async () => {
 }
 callFuncs();
 
-// cron.schedule('0 0 */3 * * *', () => {
-//     callFuncs();
-// }, {
-//     scheduled: true,
-//     timezone: "America/Sao_Paulo"
-// });
+cron.schedule('0 0 */3 * * *', () => {
+    callFuncs();
+}, {
+    scheduled: true,
+    timezone: "America/Sao_Paulo"
+});
