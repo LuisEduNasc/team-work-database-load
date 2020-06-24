@@ -10,7 +10,6 @@ var scriptName = path.basename(__filename);
 const timeEntriesInsert = async (entry) => {
     try {
         const companiesId = await handleSelect('dbo.companies', entry['company-id'], 'companiesId');
-        const parentTaskId = await handleSelect('dbo.tasks', entry.parentTaskId, 'tasksId');
         const projectsId = await handleSelect('dbo.projects', entry['project-id'], 'projectsId');
         const taskListId = await handleSelect('dbo.taskLists', entry.tasklistId, 'tasklistsId');
         const personId = await handleSelect('dbo.people', entry['person-id'], 'peopleId');
@@ -51,7 +50,7 @@ const timeEntriesInsert = async (entry) => {
             ,personfirstname        :prepareString(entry['person-first-name'])
             ,personlastname         :prepareString(entry['person-last-name'])
             ,companyid              :companiesId
-            ,parenttaskid           :parentTaskId
+            ,parenttaskid           :prepareString(entry.parentTaskId)
             ,projectsid             :projectsId
             ,tasklistid             :taskListId
             ,personid               :personId
