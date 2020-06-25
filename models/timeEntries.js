@@ -15,7 +15,7 @@ const getTimeEntries = async (page) => {
             const startDate = await getStartDate(31);
             const toDate = await getStartDate(0);
             const auth = 'Basic ' + Buffer.from(`${process.env.TW_USER}:${process.env.TW_PASS}`).toString('base64');
-            let url = `https://teamwork.corebiz.com.br/time_entries.json?fromdate=20150101&todate=${toDate}&pageSize=500&page=${page}`
+            let url = `https://teamwork.corebiz.com.br/time_entries.json?fromdate=${startDate}&todate=${toDate}&pageSize=500&page=${page}`
             console.log('request time entry ', url);
             await axios({
                 method: 'get',

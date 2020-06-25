@@ -41,7 +41,7 @@ const gsrun = async (cl) => {
             }
 
             let cont = spreadsheetIds.length;
-            resolve(cont);
+            resolve({qtd: cont, entity: 'googleSheets'});
         } catch (error) {
             console.log('Error on google sheets...', error);
             reject(error);
@@ -53,7 +53,7 @@ const getGoogleSheetsData = async (page) => {
     return new Promise(async (resolve, reject) => {
         try {
             let result;
-            const client = new google.auth.JWT(
+            const client = await new google.auth.JWT(
                 googleSheetskeys.client_email, 
                 null, 
                 googleSheetskeys.private_key,
@@ -68,8 +68,8 @@ const getGoogleSheetsData = async (page) => {
         
                 console.log('Connected to Google Sheets!');
                 result = await gsrun(client);
-            }).then(data => {
-                resolve({qtd: result, entity: 'googleSheets'});
+
+                resolve(result);
             });
 
         } catch (error) {

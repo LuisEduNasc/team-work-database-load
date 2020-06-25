@@ -14,7 +14,7 @@ const getPeople = async (page) => {
         setTimeout(async () => {
             const startDate = await getStartDate(60);
             const auth = 'Basic ' + Buffer.from(`${process.env.TW_USER}:${process.env.TW_PASS}`).toString('base64');
-            let url = `https://teamwork.corebiz.com.br/people.json?updatedAfterDate=20150101&pageSize=500&page=${page}`
+            let url = `https://teamwork.corebiz.com.br/people.json?updatedAfterDate=${startDate}&pageSize=500&page=${page}`
             console.log('request people ', url);
             await axios({
                 method: 'get',

@@ -14,7 +14,7 @@ const getTasks = async (page) => {
         setTimeout(async () => {
             const startDate = await getStartDate(5);
             const auth = 'Basic ' + Buffer.from(`${process.env.TW_USER}:${process.env.TW_PASS}`).toString('base64');
-            let url = `https://teamwork.corebiz.com.br/tasks.json?filter=all&includeCompletedTasks=true&includeCompletedSubtasks=true&updatedAfterDate=20150101&pageSize=250&page=${page}`
+            let url = `https://teamwork.corebiz.com.br/tasks.json?filter=all&includeCompletedTasks=true&includeCompletedSubtasks=true&updatedAfterDate=${startDate}&pageSize=250&page=${page}`
             console.log('request tasks ', url);
             await axios({
                 method: 'get',
