@@ -8,7 +8,7 @@ const spreadsheetIds = [
         opt =  {
             spreadsheetId: '1A6y2eJjLFJmkwe9hKk-u7FsY22t4m867a-3N_AR5t4A',
             majorDimension: 'ROWS',
-            range: "'Project golive BD'!A1:H20000"
+            range: "'Project golive BD'!A1:Z20000"
         }, 
         entity = 'projectgolive'
     ],
@@ -16,7 +16,7 @@ const spreadsheetIds = [
         opt = {
             spreadsheetId: '1A6y2eJjLFJmkwe9hKk-u7FsY22t4m867a-3N_AR5t4A',
             majorDimension: 'ROWS',
-            range: "'Project Register BD'!A1:M20000"
+            range: "'Project Register BD'!A1:Z20000"
         },
         entity = 'projectregister'
     ]
@@ -26,12 +26,6 @@ const gsrun = async (cl) => {
     return new Promise(async (resolve, reject) => {
         try {
             const gsapi = google.sheets({version: 'v4', auth: cl});
-        
-            const opt = {
-                spreadsheetId: '1A6y2eJjLFJmkwe9hKk-u7FsY22t4m867a-3N_AR5t4A',
-                majorDimension: 'COLUMNS',
-                range: "'Project Register BD'!A1:H20000"
-            };
     
             for (let index = 0; index < spreadsheetIds.length; index++) {
                 let result = await gsapi.spreadsheets.values.get(spreadsheetIds[index][0]);
