@@ -22,8 +22,7 @@ const projectsGoLiveInsert = async (project) => {
                 ,projectmanagercomments:    prepareString(project[3])
                 ,projectevaluationbypm:     prepareString(project[4])
                 ,countrygolive:             prepareString(project[5])
-                ,accountplataform:          prepareString(project[6])
-                ,ownertestimonial:          prepareString(project[7])
+                ,ownertestimonial:          prepareString(project[6])
                 ,projectsid:                projectsId
             })
     
