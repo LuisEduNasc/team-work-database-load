@@ -15,7 +15,7 @@ const getProjects = async (page) => {
         setTimeout(async () => {
             const startDate = await getStartDate(7);
             const auth = 'Basic ' + Buffer.from(`${process.env.TW_USER}:${process.env.TW_PASS}`).toString('base64');
-            let url = `https://teamwork.corebiz.com.br/projects.json?status=all&updatedAfterDate=${startDate}&includePeople=true&includeProjectOwner=true&page=${page}`
+            let url = `https://teamwork.corebiz.com.br/projects.json?status=all&updatedAfterDate=${startDate}&includePeople=true&includeProjectOwner=true&includeTags=true&page=${page}`
             console.log('request projects ', url);
             await axios({
                 method: 'get',
