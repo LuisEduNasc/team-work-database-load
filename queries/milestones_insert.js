@@ -8,14 +8,16 @@ var path = require('path');
 var scriptName = path.basename(__filename);
 
 const tasklistsInsert = async (milestones, milestonesid) => {
+
+    await connection('dbo.milestonesTasklists')
+    .where({
+        milestonesid: milestonesid
+    }).del();
+    
     for (let index = 0; index < milestones.tasklists.length; index++) {   
         let taskListsId = await handleSelect('dbo.taskLists', milestones.tasklists[index].id, 'taskListsId');
 
         if(taskListsId) {
-            await connection('dbo.milestonesTasklists')
-                .where({
-                    milestonesid: milestonesid
-                }).del();
         
             await connection('dbo.milestonesTasklists')
             .insert({
@@ -29,13 +31,14 @@ const tasklistsInsert = async (milestones, milestonesid) => {
 }
 
 const tagsInsert = async (milestones, milestonesid) => {
+
+    await connection('dbo.milestonesTags')
+    .where({
+        milestonesid: milestonesid
+    }).del();
+
     for (let index = 0; index < milestones.tags.length; index++) {   
         let tagsId = await handleSelect('dbo.tags', milestones.tags[index].id, 'tagsId');
-
-        await connection('dbo.milestonesTags')
-            .where({
-                milestonesid: milestonesid
-            }).del();
     
         await connection('dbo.milestonesTags')
         .insert({

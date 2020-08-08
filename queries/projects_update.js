@@ -9,13 +9,14 @@ var path = require('path');
 var scriptName = path.basename(__filename);
 
 const tagsInsert = async (project, projectsId) => {
+    
+    await connection('dbo.projectsTags')
+    .where({
+        projectsid: projectsId
+    }).del();
+
     for (let index = 0; index < project.tags.length; index++) {   
         let tagsId = await handleSelect('dbo.tags', project.tags[index].id, 'tagsId');
-
-        await connection('dbo.projectsTags')
-            .where({
-                projectsid: projectsId
-            }).del();
     
         await connection('dbo.projectsTags')
         .insert({
