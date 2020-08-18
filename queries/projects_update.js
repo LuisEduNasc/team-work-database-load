@@ -59,14 +59,13 @@ const peopleInsert = async (project, projectsId) => {
                     projectsid: projectsId
                     ,peopleid: peopleId
                 }).max('projectsId')
-                .select('projectsId')
                 .first();
 
                 let projectsid = await connection('dbo.projectsPeople')
                     .where({
                         projectsid: projectsId
                         ,peopleid: peopleId
-                    }).andWhere('projectsId', '=', maxId)
+                    }).andWhere('projectsId', '=', maxId['max(`projectsId`)'])
                     .andWhere('toDate', '<', date)
                     .select('projectsId')
                     .first();
