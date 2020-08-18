@@ -19,6 +19,14 @@ const spreadsheetIds = [
             range: "'Project Register BD'!A1:Z20000"
         },
         entity = 'projectregister'
+    ],
+    financial = [
+        opt = {
+            spreadsheetId: '13WbUPyaDwIOlgkETdUKxPM2P_jXpgpScgwxBNjsDGUs',
+            majorDimension: 'ROWS',
+            range: "'Extrato'!A1:Z20000"
+        },
+        entity = 'financial'
     ]
 ]
 

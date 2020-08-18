@@ -45,6 +45,8 @@ const projectregister_exists = require('../queries/projectregister_exists');
 const timeentries_insert = require('../queries/timeEntries_insert');
 const timeentries_update = require('../queries/timeEntries_update');
 const timeentries_exists = require('../queries/timeEntries_exists');
+const financial_delete = require('../queries/financial_delete');
+const financial_insert = require('../queries/financial_insert');
 
 const querySelector = {
     categories_insert: categories_insert,
@@ -92,21 +94,34 @@ const querySelector = {
     timeentries_insert: timeentries_insert,
     timeentries_update: timeentries_update,
     timeentries_exists: timeentries_exists,
+    financial_delete: financial_delete,
+    financial_insert: financial_insert
 }
 
 const persistenceRoute = (entity, data) => {
     return new Promise( async (resolve, reject) => {
         try {
-            let exists = querySelector[entity+'_exists'];
-            let insert = querySelector[entity+'_insert'];
-            let update = querySelector[entity+'_update'];
-        
-            for (let index = 0; index < data.length; index++) {
-                const existsQuery = await exists(data[index]);
-        
-                if(existsQuery) {
-                    await update(data[index]);
-                } else {
+            if(entity != 'financial') {
+                let exists = querySelector[entity+'_exists'];
+                let insert = querySelector[entity+'_insert'];
+                let update = querySelector[entity+'_update'];
+            
+                for (let index = 0; index < data.length; index++) {
+                    const existsQuery = await exists(data[index]);
+            
+                    if(existsQuery) {
+                        await update(data[index]);
+                    } else {
+                        await insert(data[index]);
+                    }
+                }
+            } else {
+                let del = querySelector[entity+'_delete'];
+                let insert = querySelector[entity+'_insert'];
+
+                await del();
+
+                for (let index = 0; index < data.length; index++) {
                     await insert(data[index]);
                 }
             }
