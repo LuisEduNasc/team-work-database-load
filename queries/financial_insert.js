@@ -11,21 +11,21 @@ const financialInsert = async (financial) => {
     try {
         const result = await connection('dbo.financial')
             .insert({
-                duedate:                prepareString(financial[0])
-                ,competencedate:        prepareString(financial[1])  
-                ,category:              prepareString(financial[2])
-                ,description:           prepareString(financial[3])
-                ,customersupplier:      prepareString(financial[4])
-                ,amountreceived:        prepareString(financial[5])
-                ,amountpaid:            prepareString(financial[6])
-                ,balance:               prepareString(financial[7])
-                ,account:               prepareString(financial[8])
-                ,costcenter:            prepareString(financial[9])
-                ,originalvalue:         prepareString(financial[10])
-                ,interestfine:          prepareString(financial[11])
-                ,discountsfees:         prepareString(financial[12])
-                ,receiptpaymentdate:    prepareString(financial[13])
-                ,comments:              prepareString(financial[14])
+                duedate:                financial[0]
+                ,competencedate:        financial[1] 
+                ,category:              financial[2]
+                ,description:           financial[3]
+                ,customersupplier:      financial[4]
+                ,amountreceived:        financial[5]
+                ,amountpaid:            financial[6]
+                ,balance:               financial[7]
+                ,account:               financial[8]
+                ,costcenter:            financial[9]
+                ,originalvalue:         financial[10]
+                ,interestfine:          financial[11]
+                ,discountsfees:         financial[12]
+                ,receiptpaymentdate:    financial[13]
+                ,comments:              financial[14]
             })
     
         log('financial', 'INSERT', financial[0]);
