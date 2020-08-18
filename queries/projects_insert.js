@@ -28,6 +28,10 @@ const tagsInsert = async (project, projectsId) => {
 }
 
 const peopleInsert = async (project, projectsId) => {
+    let d = new Date();
+    d.setDate(d.getDate()-2);
+    let date = d.toISOString().substr(0, 10);
+
     for (let index = 0; index < project.people.length; index++) {
        let peopleId = await handleSelect('dbo.people', project.people[index], 'peopleId');
 
@@ -49,12 +53,20 @@ const peopleInsert = async (project, projectsId) => {
                         ,todate: connection.fn.now()
                     });
             } else {
-                let date = await getStartDate(2);
+                let maxId = await connection('dbo.projectsPeople')
+                .where({
+                    projectsid: projectsId
+                    ,peopleid: peopleId
+                }).max('projectsId')
+                .select('projectsId')
+                .first();
+
                 let projectsid = await connection('dbo.projectsPeople')
                     .where({
                         projectsid: projectsId
                         ,peopleid: peopleId
-                    }).andWhere('toDate', '<', date)
+                    }).andWhere('projectsId', '=', maxId)
+                    .andWhere('toDate', '<', date)
                     .select('projectsId')
                     .first();
 
