@@ -47,6 +47,12 @@ const timeentries_update = require('../queries/timeEntries_update');
 const timeentries_exists = require('../queries/timeEntries_exists');
 const financial_delete = require('../queries/financial_delete');
 const financial_insert = require('../queries/financial_insert');
+const evaluationChapter_delete = require('../queries/evaluationChapter_delete');
+const evaluationChapter_insert = require('../queries/evaluationChapter_insert');
+const evaluationLeader_delete = require('../queries/evaluationLeader_delete');
+const evaluationLeader_insert = require('../queries/evaluationLeader_insert');
+const sporadicAlignment_delete = require('../queries/sporadicAlignment_delete');
+const sporadicAlignment_insert = require('../queries/sporadicAlignment_insert');
 
 const querySelector = {
     categories_insert: categories_insert,
@@ -95,13 +101,19 @@ const querySelector = {
     timeentries_update: timeentries_update,
     timeentries_exists: timeentries_exists,
     financial_delete: financial_delete,
-    financial_insert: financial_insert
+    financial_insert: financial_insert,
+    evaluationChapter_delete: evaluationChapter_delete,
+    evaluationChapter_insert: evaluationChapter_insert,
+    evaluationLeader_delete: evaluationLeader_delete,
+    evaluationLeader_insert: evaluationLeader_insert,
+    sporadicAlignment_delete: sporadicAlignment_delete,
+    sporadicAlignment_insert: sporadicAlignment_insert
 }
 
 const persistenceRoute = (entity, data) => {
     return new Promise( async (resolve, reject) => {
         try {
-            if(entity != 'financial') {
+            if(entity != 'financial' && entity != 'evaluationChapter' && entity != 'evaluationLeader' && entity != 'sporadicAlignment') {
                 let exists = querySelector[entity+'_exists'];
                 let insert = querySelector[entity+'_insert'];
                 let update = querySelector[entity+'_update'];

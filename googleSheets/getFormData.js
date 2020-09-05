@@ -27,6 +27,30 @@ const spreadsheetIds = [
             range: "'Extrato'!A1:Z20000"
         },
         entity = 'financial'
+    ],
+    evaluationChapter = [
+        opt = {
+            spreadsheetId: '1iytHcjLgdcbEZeaYVkqdsc8KKitniS8dI-zLvAfEcG0',
+            majorDimension: 'ROWS',
+            range: "'1:1 Tecnico: Chapters'!A1:Z20000"
+        },
+        entity = 'evaluationChapter'
+    ],
+    evaluationLeader = [
+        opt = {
+            spreadsheetId: '1iytHcjLgdcbEZeaYVkqdsc8KKitniS8dI-zLvAfEcG0',
+            majorDimension: 'ROWS',
+            range: "'1:1 Gerencial. Líder'!A1:Z20000"
+        },
+        entity = 'evaluationLeader'
+    ],
+    sporadicAlignment = [
+        opt = {
+            spreadsheetId: '1iytHcjLgdcbEZeaYVkqdsc8KKitniS8dI-zLvAfEcG0',
+            majorDimension: 'ROWS',
+            range: "'1:1 Alinhamento Esporádico'!A1:Z20000"
+        },
+        entity = 'sporadicAlignment'
     ]
 ]
 
