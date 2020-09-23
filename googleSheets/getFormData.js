@@ -40,7 +40,7 @@ const spreadsheetIds = [
         opt = {
             spreadsheetId: '1iytHcjLgdcbEZeaYVkqdsc8KKitniS8dI-zLvAfEcG0',
             majorDimension: 'ROWS',
-            range: "'1:1 Gerencial. Líder'!A1:Z20000"
+            range: "'1:1 Gerencial. Gestor'!A1:Z20000"
         },
         entity = 'evaluationLeader'
     ],
