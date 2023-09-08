@@ -6,7 +6,7 @@ const persistenceRoute = require('../dao/persistenceRoute');
 const spreadsheetIds = [
     projectGolive = [ 
         opt =  {
-            spreadsheetId: '1A6y2eJjLFJmkwe9hKk-u7FsY22t4m867a-3N_AR5t4A',
+            spreadsheetId: '',
             majorDimension: 'ROWS',
             range: "'Project golive BD'!A1:Z20000"
         }, 
@@ -14,7 +14,7 @@ const spreadsheetIds = [
     ],
     projectRegister = [
         opt = {
-            spreadsheetId: '1A6y2eJjLFJmkwe9hKk-u7FsY22t4m867a-3N_AR5t4A',
+            spreadsheetId: '',
             majorDimension: 'ROWS',
             range: "'Project Register BD'!A1:Z20000"
         },
@@ -22,7 +22,7 @@ const spreadsheetIds = [
     ],
     financial = [
         opt = {
-            spreadsheetId: '13WbUPyaDwIOlgkETdUKxPM2P_jXpgpScgwxBNjsDGUs',
+            spreadsheetId: '',
             majorDimension: 'ROWS',
             range: "'Extrato'!A1:Z20000"
         },
@@ -30,7 +30,7 @@ const spreadsheetIds = [
     ],
     evaluationChapter = [
         opt = {
-            spreadsheetId: '1iytHcjLgdcbEZeaYVkqdsc8KKitniS8dI-zLvAfEcG0',
+            spreadsheetId: '',
             majorDimension: 'ROWS',
             range: "'1:1 Tecnico: Chapters'!A1:Z20000"
         },
@@ -38,7 +38,7 @@ const spreadsheetIds = [
     ],
     evaluationLeader = [
         opt = {
-            spreadsheetId: '1iytHcjLgdcbEZeaYVkqdsc8KKitniS8dI-zLvAfEcG0',
+            spreadsheetId: '',
             majorDimension: 'ROWS',
             range: "'1:1 Gerencial. Gestor'!A1:Z20000"
         },
@@ -46,7 +46,7 @@ const spreadsheetIds = [
     ],
     sporadicAlignment = [
         opt = {
-            spreadsheetId: '1iytHcjLgdcbEZeaYVkqdsc8KKitniS8dI-zLvAfEcG0',
+            spreadsheetId: '',
             majorDimension: 'ROWS',
             range: "'1:1 Alinhamento Esporádico'!A1:Z20000"
         },
