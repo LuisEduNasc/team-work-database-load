@@ -1,12 +1,12 @@
 {
   "type": "service_account",
   "project_id": "projectteamwork",
-  "private_key_id": "878d5c7c7ef7273babdaafa5e6f4501553db3132",
-  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCrGyzBz8RLaAQZ\nBuAYRHS/HClxEQdLpuOkm70eDbD+vsBBjD4np1ALj0LBZYV6rjsRIkG0AiaRJY5a\nBY4ZcUgAKddGgBCKAzR5XowfvLq6NZInT7kGvfKXXTfC3/L8NlVBBSGFpcelux4O\n1tuwbdH9AXkvtBT7asPMvW+XJt65T3ld+SwbL0XuvAQuFGR54LTT+nPdYZiVQ33v\nmTeBTCZseLBYaxrarQ4gx5nlDmv+cRXwuFf9QlclApiDFgLjy4l7r6TN6BMk0J8V\nr+LZn9F5T1MeXv2qvOPNQs2dNyb9inxz8ht/J/hro8mVjBuT0Mxg/gxX1VKgyzqk\nMBurKyCTAgMBAAECggEAAhTqjnvAn5+RrTGa4wYHhZZfdV4Hq1v0bmRBVhmZ4FTh\nxz+1jItJ5gTFgyTWYuULwuxFGwjg/z29uvVRApjmOgTy9uCdUuXcauhDkX9HpkxQ\njY84E7pBNqY5BMiaDtzPsg17Quz+vigbTYLqWVMnYt9Jt32GuShWCX+kg+pCe26p\noKsrL4uXmIHW6ImVUlxf9dIYVGnUcI/1zJRxq5R+Q9nZblaOn56bwvKpZ+9kiKo2\n38cQkP2VS6qpcvgcPSbPmEOqQPDibksk/hjY8EUad/8YRZJlt0RKpd6k2svKoCP6\n7ckn745Sec1ZflPsG2k9+V7arL6cUImUJTpHB0TygQKBgQDuP63CWb4aWpKfGfgj\nmBvDOPAlCb+dzz0ejaAIW1AWQoah+LPLh5416qzyyAwULV0wOwHrp+MJhhRQSD56\nyOSbw4IMc3ZiOFmNuEl+DyIoRoDEXDPaGumvPrr7RuZHVxFAHs4Xq/4LYdEPSFAk\n4CCIHPQ+ZsARfUTzSIrU9p5piQKBgQC32tQFkQgijpBTMRAZFk7moF+qD7qI/R7f\nNZZtpG8OV0lnW3Bdm93QAYbYy2o4HolXzKKe1K6fadxfQFWlPQbLxNSZcWjnIJ1l\nuo/M4xfAY/a2W2zdrSWkBftjbTm6bY6C1EHbWwAtNmalbb4ttkCEf0cB3rC9jzlu\nRQjwlwTeOwKBgFWVPl/QSP/ChWTtuTtgCqkILQvBAro3lacCDPizhINahm5snnmA\nUA7iLBpSTjR5Tz5iFACJIH9tUKK+MON+gtCJXJAIcgA6acEE8DF+UjDRkrP2wxGY\nFVXEXPqir1n1Jtc3uaS7Pdjs3GJ3AYMdl9INRJed5WTi8P/LkUOLC8CxAoGBAJxu\nssvxtOxCRQajzkCqPIP6nKsEKwD37daZr96mdF/NYQVyRc9AGaEsS2IW4c/SG6X6\n1bsy10mINxtMkBLCNBAY75OHbWyK0aGG9WetKb5mz7olXCHZexduh5D3lJDNOt6S\nX16WtTXC/d9v2srmMUsLSI2MvvDq9kCeuJaMyHWVAoGBAOYD2DK+0x3KPb4zODRR\n8wCosv4LXwSodIqWTKFStNLAF3NqQnWVVhYJWa2S+0edoLq0kwTjxmaMZ0GdhXLH\nl4DusZxkeDxvr3f/0ES0+hcJmuLIdCv8yqYqHOnOaUgF8+Z/R3y92o0+f/57KFYq\n3KNaTU2ScG03aTHebIQIBqum\n-----END PRIVATE KEY-----\n",
-  "client_email": "corebizfranca@projectteamwork.iam.gserviceaccount.com",
-  "client_id": "114598950824088766190",
+  "private_key_id": "",
+  "private_key": "",
+  "client_email": "",
+  "client_id": "",
   "auth_uri": "https://accounts.google.com/o/oauth2/auth",
   "token_uri": "https://oauth2.googleapis.com/token",
   "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/corebizfranca%40projectteamwork.iam.gserviceaccount.com"
+  "client_x509_cert_url": ""
 }
